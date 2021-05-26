@@ -12,7 +12,7 @@ insert into grade values(003,'수영리',94,97,90);
 
 drop table grade;
 drop table p_result;
-1
+
 create table p_result(
 	membernum	varchar2(3),
 	member		varchar2(10),
@@ -28,11 +28,4 @@ from grade
 select p.membernum, p.member, round((math+eng+lang)/ 3,0)  result 
 from grade g, p_result p
 where p.membernum = g.membernum and p.member = g.member
-order by result desc
-
-select p.membernum, p.member, round((math+eng+lang)/3 , 0) result from grade g, p_result p
-group by p.membernum, p.member
-select p.membernum,  round((math+eng+lang)/3 , 0) result from p_result p, grade g 
-
-select round(math+eng+lang),0)/3 result from grade g
-select round((math+eng+lang)/ 3,0)  result from grade g
+order by membernum desc
