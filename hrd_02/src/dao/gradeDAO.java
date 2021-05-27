@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import jdbc.JDBC;
 import vo.gradeVO;
+import vo.resultVO;
 
 public class gradeDAO {
 	private ResultSet rs;

@@ -1,4 +1,4 @@
-<%@page import="dao.resultVO"%>
+<%@page import="vo.resultVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.gradeDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
