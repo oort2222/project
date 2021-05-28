@@ -6,6 +6,13 @@ public class gradeVO {
 	private int math;
 	private int eng;
 	private int lang;
+	private int result;
+	public int getResult() {
+		return result;
+	}
+	public void setResult(int result) {
+		this.result = result;
+	}
 	public String getMembernum() {
 		return membernum;
 	}

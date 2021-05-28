@@ -1,5 +1,10 @@
+<%@page import="dao.gradeDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	gradeDAO dao = new gradeDAO();
+	int max = dao.MaxNO();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +24,7 @@
 			<table border="1">
 				<tr>
 					<th>회원번호</th>
-					<td><input type="text" name="membernum" id="membernum" value=""></td>
+					<td><input type="text" name="membernum" id="membernum" value="<%=max%>"></td>
 				</tr>
 				<tr>
 					<th>회원이름</th>

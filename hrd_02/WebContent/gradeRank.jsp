@@ -1,3 +1,4 @@
+<%@page import="vo.gradeVO"%>
 <%@page import="vo.resultVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.gradeDAO"%>
@@ -5,7 +6,7 @@
     pageEncoding="UTF-8"%>
 <%
 	gradeDAO dao = new gradeDAO();
-	ArrayList<resultVO> result = dao.result();
+	ArrayList<gradeVO> rank = dao.gradeRank();
 %>
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,7 @@
 				<td>등급</td>
 			</tr>
 <%
-	for(resultVO vo : result){
+	for(gradeVO vo : rank){
 		int res = vo.getResult();
 		String grade = "";
 		if(res >= 90){

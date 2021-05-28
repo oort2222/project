@@ -1,6 +1,6 @@
 create table grade(
-	membernum	varchar2(3),
-	member		varchar2(10),
+	membernum	varchar2(30),
+	member		varchar2(30),
 	math		number(3),
 	eng			number(3),
 	lang		number(3),
@@ -21,11 +21,16 @@ create table p_result(
 insert into p_result values(001,'김영리',60);
 insert into p_result values(002,'강영리',62);
 insert into p_result values(003,'수영리',93);
-
+select * from P_RESULT
 select membernum,member,math,eng,lang
 from grade
 
-select p.membernum, p.member, round((math+eng+lang)/ 3,0)  result 
-from grade g, p_result p
-where p.membernum = g.membernum and p.member = g.member
+select membernum, member, round((math+eng+lang)/ 3,0)  result 
+from grade g
 order by membernum desc
+
+select nvl(max(membernum),0)+1 max
+from GRADE
+
+select *
+from GRADE
